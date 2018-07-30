@@ -1,0 +1,84 @@
+<title>Icon Generator</title>
+<style>
+		:root {
+			--bg: #f4cc70;
+			--obg: #20948b;
+			--tc: #000;
+			--otc: #ffffff;
+			--otch: #00ffff;
+		}
+		
+		/*a lot of these styles come from view-source:https://css-tricks.com/examples/DragAndDropFileUploading/*/
+		body {
+			font-family: sans-serif;
+			color: var(--tc);
+			padding: 5rem 1.25rem;
+			background-color: var(--bg);
+		}
+		
+		.container {
+			/* background-color: #92b0b3; */
+			outline: 2px dashed #fff;
+			outline-offset: -10px;
+			transition: outline-offset .15s ease-in-out, background-color .15s linear;
+			background-color: var(--obg);
+			padding: 100px 20px;
+			box-sizing: border-box;
+			vertical-align: baseline;
+			border: 0;
+			color: var(--otc);
+		}
+		#containerContainer {
+			width: 100%;
+			max-width: 680px;
+			text-align: center;
+			margin: 0 auto;
+			font-size: 1.5rem;
+		}
+		
+		.animated {
+			outline-offset: -20px;
+			outline-color: #c8dadf;
+			background-color: #fff;
+		}
+		
+		.container label {
+			cursor: pointer;
+		}
+		
+		.container label:hover strong {
+			color: var(--otch);
+		}
+		
+		p, a {
+			/*text-decoration: none;*/
+			font-style: italic;
+			color: var(--tc);
+			font-size: 0.75rem;
+		}		
+		.hidden {
+			display: none;
+		}
+		.center {
+			text-align: center;
+			justify-content: center;
+		}
+		
+		.default {
+			cursor: default;
+		}
+	</style>
+<!--<div><input type="file" id="pic" name="pic" accept="image/*"></div>-->
+<h2 class="center">Icon Generator</h2>
+<section id="containerContainer">
+	<section class="container">
+		<input type="file" id="pic" style="display: none" accept="image/*">
+		<label id="label" for="pic"><strong>Select icon</strong> (at least 96px)</label>
+	</section>
+</section>
+<section>
+	<p class="center default">Thanks heaps to <a href="https://css-tricks.com/drag-and-drop-file-uploading/">CSS-Tricks</a> for the layout, <a href="https://stuk.github.io/jszip/">JSZip</a> for working with zip files and <a href="https://github.com/eligrey/FileSaver.js">FileSaver</a> for downloading the file.</p>
+</section>
+<script src="jszip.min.js"></script>
+<script src="filesaver.js"></script>
+<script src="iconmaker.js"></script>
