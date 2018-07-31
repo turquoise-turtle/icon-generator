@@ -1,11 +1,12 @@
 <title>Icon Generator</title>
 <style>
 		:root {
+			/*BackGround, OtherBackGround, TextContent, OtherTextContent, OtherTextContentHighlight 00fffff */
 			--bg: #f4cc70;
 			--obg: #20948b;
 			--tc: #000;
 			--otc: #ffffff;
-			--otch: #00ffff;
+			--otch: var(--bg);
 		}
 		
 		/*a lot of these styles come from view-source:https://css-tricks.com/examples/DragAndDropFileUploading/*/
@@ -38,8 +39,9 @@
 		
 		.animated {
 			outline-offset: -20px;
-			outline-color: #c8dadf;
-			background-color: #fff;
+			outline-color: var(--obg);
+			background-color: var(--otc);
+			color: var(--obg);
 		}
 		
 		.container label {
