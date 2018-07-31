@@ -64,7 +64,7 @@ function defaultFor(arg, val) { return typeof arg !== 'undefined' ? arg : val; }
 function addTextAndSaveImg(options) {
 	var size = options.w + 2*defaultFor(options.p, 0);
 	var filename = 'icons/icon' + size + '.png';
-	var text = '"' + size + '": ' + filename + '"';
+	var text = '"' + size + '": "' + filename + '"';
 	codeText.push(text);
 	
 	var savable = canvas.toDataURL();
