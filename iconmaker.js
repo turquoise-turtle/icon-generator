@@ -47,7 +47,8 @@ function drawLoop(img) {
 		{w: 16},
 		{w: 38},
 		{w: 64},
-		{w: 96, p: 16}
+		{w: 96, p: 16},
+		{w: 512}
 	];
 
 	for (var index in sizes) {
