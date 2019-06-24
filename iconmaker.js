@@ -9,6 +9,14 @@ var ctx = canvas.getContext('2d');
 var codeText;// = [];
 var zip;// = new JSZip();
 
+var sizes = [
+	{w: 16},
+	{w: 38},
+	{w: 64},
+	{w: 96, p: 16},
+	{w: 512}
+];
+
 function handle(img) {
 	codeText = [];
 	zip = new JSZip();
@@ -43,14 +51,6 @@ function draw(img, options) {
 }
 
 function drawLoop(img) {
-	var sizes = [
-		{w: 16},
-		{w: 38},
-		{w: 64},
-		{w: 96, p: 16},
-		{w: 512}
-	];
-
 	for (var index in sizes) {
 	//console.log(sizes[size]);
 		draw(img, sizes[index]);
